@@ -1,4 +1,4 @@
-export default function Infobox({image,htext,stext})
+export default function Infobox({image,htext,stext,visible})
 {
     return <div className="lg:flex flex-row hidden w-[22rem] justify-around h-[7rem] rounded-[20px] shadow-xl my-[1rem]">
         <div className="my-auto w-[3rem] m-[1rem]">
