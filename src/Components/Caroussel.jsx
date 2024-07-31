@@ -22,8 +22,8 @@ export default function Caroussel()
     return <div className='w-[90%] md:w-[80%] lg:w-[50%] flex flex-col justify-center'>
         <div className='ml-[8%]'>
         <p className="text-blue-400 -tracking-tight my-3">REAL ESTATE</p>
-        <h1 className="text-[2.5rem] md:text-[3rem] font-semibold leading-[3rem] my-2 ">Find a Perfect <br/>home  you Love ..!</h1>
-        <p className="text-gray-400 my-2 w-[100%]">ur, quod dolorum, consectetur facere totam ducimus, nulla excepturi alias perferendis doloribus illo.</p>
+        <h1 className="text-[2.6rem] md:text-[3rem] font-semibold leading-[2.5rem] sm:leading-[3rem] my-6 ">Find a Perfect <br/>home  you Love ..!</h1>
+        <p className="text-gray-400 my-6 w-[100%]">ur, quod dolorum, consectetur facere totam ducimus, nulla excepturi alias perferendis doloribus illo.</p>
         </div>
         <div>
         <div className='w-[100%] flex flex-col justify-center '>

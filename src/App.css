@@ -37,6 +37,9 @@ background: linear-gradient(0deg, #A5C4F3, #FFFFFF);
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
+.cardoverlay{
+    background-image: linear-gradient(to bottom, #aeaeae, #7f7f7f, #545454, #2c2c2c, #000000);
+}
 @keyframes scroll{
     to{
         transform:translateX(-50%);

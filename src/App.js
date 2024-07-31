@@ -2,6 +2,9 @@ import Navbar from './Components/Navbar';
 import Main from './Components/Main'
 import Trust from './Components/Trust'
 import Assist from './Section/Assist';
+import Properties from './Section/Properties';
+import Services from './Section/Services';
+import Neighbour from './Section/Neighbour';
 import './App.css';
 
 function App() {
@@ -11,6 +14,9 @@ function App() {
       <Main/>
       <Trust/>
       <Assist/>
+      <Properties/>
+      <Services/>
+      <Neighbour/>
     </div>
   );
 }
