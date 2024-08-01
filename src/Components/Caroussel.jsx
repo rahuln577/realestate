@@ -2,7 +2,7 @@ import bedroom from '../Images/house1.jpg'
 import house2 from '../Images/house2.jpg'
 import house3 from '../Images/house3.jpg'
 import {useState,useEffect} from 'react'
-let car=[bedroom,house2,house3]
+let car=["https://images.pexels.com/photos/449461/pexels-photo-449461.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2","https://images.pexels.com/photos/5997993/pexels-photo-5997993.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2","https://images.pexels.com/photos/8134849/pexels-photo-8134849.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"]
 
 export default function Caroussel()
 {
@@ -28,10 +28,10 @@ export default function Caroussel()
         <div>
         <div className='w-[100%] flex flex-col justify-center '>
         <div className='flex flex-row items-center min-w-[100%]'>
-            <button className='rounded-[50%] bg-white shadow-lg w-[3rem] h-[3rem] text-gray-400 left-5 relative' onClick={()=>setcarstate((prev)=>{if(prev==0)return 2
+            <button className='rounded-[50%] bg-white shadow-lg w-[3rem] h-[3rem] text-gray-400 left-5 relative' onClick={()=>setcarstate((prev)=>{if(prev===0)return 2
                 else return prev-1
             })}>{'<'}</button>
-            <img src={car[carstate]} className='min-w-[80%] max-h-[15rem] sm:max-w-[40rem] sm:max-h-[20rem] rounded-2xl shadow-2xl'></img>
+            <img src={car[carstate]} className='min-w-[90%] h-[15rem] sm:max-w-[40rem] sm:h-[18rem] rounded-2xl shadow-2xl'></img>
             <button className='rounded-[50%] bg-white shadow-lg w-[3rem] h-[3rem] text-gray-400 relative right-5' onClick={()=>setcarstate((prev)=>(prev+1)%3)}>{'>'}</button>
         </div>
         <div className='flex justify-evenly min-w-[90%] sm:max-w-[95%] mt-3'>

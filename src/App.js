@@ -5,6 +5,8 @@ import Assist from './Section/Assist';
 import Properties from './Section/Properties';
 import Services from './Section/Services';
 import Neighbour from './Section/Neighbour';
+import Testimonial from './Section/Testimonial';
+import Footer from './Section/Footer';
 import './App.css';
 
 function App() {
@@ -17,6 +19,8 @@ function App() {
       <Properties/>
       <Services/>
       <Neighbour/>
+      <Testimonial/>
+      <Footer/>
     </div>
   );
 }

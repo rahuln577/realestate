@@ -2,7 +2,7 @@ import bedlogo from '../Images/bedlogo.png'
 import bathlogo from '../Images/bathlogo.png'
 export default function PropertyCard(prop)
 {
-    return<div className='flex flex-col w-[100%] sm:w-[70%] md:min-w-[18rem] my-6'>
+    return<div className='flex flex-col w-[16rem] sm:min-w-[18rem] my-6'>
         <img src={prop.image} className='w-[100%] md:w-[17rem] h-[16rem] rounded-[20px]'></img>
         <div className='flex flex-col gap-1'>
             <h2 className='mt-2 text-[1.2rem] font-semibold'>Rs. {prop.amount}</h2>
