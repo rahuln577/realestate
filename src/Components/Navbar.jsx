@@ -4,6 +4,7 @@ import {Link,Outlet} from 'react-router-dom'
 import {useRef} from 'react'
 export default function Navbar()
 {
+    let flag=false
     const ref=useRef()
     function ham()
     {
