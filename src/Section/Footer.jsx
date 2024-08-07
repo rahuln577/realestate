@@ -3,7 +3,7 @@ import { MdOutlineMail } from "react-icons/md";
 
 export default function Footer()
 {
-    return <div>
+    return <footer className="">
     <div className="w-full bg-blue-200 flex flex-col md:flex-row justify-around gap-4 items-center py-[3rem]">
         <div className="flex flex-col gap-5 w-[40%] md:w-[20%]">
             <p className="text-[0.9rem] font-light">171,8th cross,4th main,<br/>Sampige layout, Bengaluru, Karnataka</p>
@@ -25,5 +25,5 @@ export default function Footer()
     <div className="w-full bg-blue-300">
             <h2 className="text-center p-1">All Copyrights Reserved.</h2>
     </div>
-    </div>
+    </footer>
 }

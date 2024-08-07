@@ -45,3 +45,26 @@ background: linear-gradient(0deg, #A5C4F3, #FFFFFF);
         transform:translateX(-50%);
     }
 }
+
+.filapp{
+    animation:filappanim forwards 1s; 
+}
+.filcl{
+    animation: filclanim forwards 1s;
+}
+@keyframes filappanim{
+    from{
+        transform:translateY(-100%);
+    }
+    to{
+        transform:translateY(-12%);
+    }
+}
+@keyframes filclanim{
+    from{
+        transform:translateY(-12%);
+    }
+    to{
+        transform:translateY(-100%);
+    }
+}
