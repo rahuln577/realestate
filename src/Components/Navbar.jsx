@@ -21,7 +21,7 @@ export default function Navbar()
         
         }
     }
-    return <nav className="flex flex-row justify-between w-[100%] mt-2 sticky py-3  shadow-sm top-0 backdrop-blur-lg  backdrop-opacity-100">
+    return <nav className="z-[100] flex flex-row justify-between w-[100%] mt-2 sticky py-3  shadow-sm top-0 backdrop-blur-lg  backdrop-opacity-100">
         <div className="py-2 w-full flex justify-end pr-3 lg:ml-0 lg:justify-center z-[-1] absolute">
             <h2 className='text-[1.2rem] py-1'>Real</h2>
         </div>
@@ -36,8 +36,8 @@ export default function Navbar()
                 <a href="" className='px-3 py-1'>Blogs</a>
                 <Link to="/listing" className='px-3 py-1'>Listings</Link>
                 <a href="" className='px-3 py-1'>Services</a>
-                <a href="" className="py-2 flex flex-row gap-1 font-light text-[1.1rem] items-center"><img src={logo} className='w-[50%] h-[100%]'></img>Login/Register</a>
-                <button className="font-light bg-blue-800 w-[9rem] justify-center gap-1 flex flex-row rounded-[90px] text-white py-2 text-[0.95rem]"><img src={house} className=''></img>Add Listing</button>
+                <Link to="/login" className="py-2 flex flex-row gap-1 font-light text-[1.1rem] items-center"><img src={logo} className='w-[50%] h-[100%]'></img>Login/Register</Link>
+                <Link to="/addlisting" className="font-light bg-blue-800 w-[9rem] justify-center gap-1 flex flex-row rounded-[90px] text-white py-2 text-[0.95rem]"><img src={house} className=''></img>Add Listing</Link>
         </div>
         <div className='font-poppins hidden lg:block ml-2'>
             <ul className="py-2 gap-5 list-none font-poppins text-[1.1rem] flex flex-row justify-between font-light items-center">
@@ -50,8 +50,8 @@ export default function Navbar()
         </div>
         
         <div className="flex-row gap-4 items-center hidden lg:flex mr-4">
-            <a href="" className="py-2 flex flex-row gap-1 font-light text-[1.1rem] items-center"><img src={logo} className='w-[100%] h-[100%]'></img>Login/Register</a>
-            <button className="font-light bg-blue-800 w-[9rem] justify-center gap-1 flex flex-row rounded-[90px] text-white py-2 text-[0.95rem]"><img src={house} className=''></img>Add Listing</button>
+            <Link to="/login" className="py-2 flex flex-row gap-1 font-light text-[1.1rem] items-center"><img src={logo} className='w-[100%] h-[100%]'></img>Login/Register</Link>
+            <Link to="/addlisting" className="font-light bg-blue-800 w-[9rem] justify-center gap-1 flex flex-row rounded-[90px] text-white py-2 text-[0.95rem]"><img src={house} className=''></img>Add Listing</Link>
         </div>
         <div className='lg:hidden flex flex-col h-[2.5rem] justify-evenly ml-2 cursor-pointer' onClick={ham}>
             <div className='bg-gray-600 w-[2rem] h-[0.2rem] rounded-[100px]'></div>

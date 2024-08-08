@@ -9,7 +9,7 @@ export default function Filter() {
             return [Math.floor((slide[0] / 100) * 100000), Math.floor((slide[1] / 100) * 100000)]
         })
     }
-    return <div className="lg:block hidden shadow-xl rounded-lg w-[30%] h-[31rem] py-4 sticky top-[17%] left-4 mb-[6rem]">
+    return <div className="lg:block hidden shadow-xl rounded-lg w-[30%] h-[31rem] py-4 sticky top-[17%] left-4 mb-[3rem] z-[0]">
         <h1 className="border-b-blue-600 border-b-[2.5px] text-center text-[1.2rem] pb-2 w-[90%] mx-auto">Filters</h1>
         <div className="w-[90%] mx-auto my-[2rem]">
             <h1 className="font-semibold text-[0.9rem] my-2">BHK Type</h1>
