@@ -4,7 +4,7 @@ import image from '../Images/Assist/image.png'
 import image2 from '../Images/Assist/image2.png'
 import Infobox from "../Components/Infobox"
 export default function Assist() {
-    return <div className="flex flex-col lg:flex-row w-[80%] mx-auto my-[6rem]">
+    return <div className="flex flex-col lg:flex-row w-[80%] mx-auto my-[6rem]" id="about">
         <Assisttext />
         <Assistimg />
         <div className="flex lg:hidden flex-column justify-center mt-[0rem]">

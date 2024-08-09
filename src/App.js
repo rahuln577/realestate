@@ -6,6 +6,7 @@ import Login from './Pages/Login';
 import Footer from './Section/Footer';
 import Register from './Pages/Register';
 import AddListing from './Pages/AddListing';
+import Account from './Pages/Account';
 import './App.css';
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
           <Route path="/login" element={<Login/>}></Route>
           <Route path="/register" element={<Register/>}></Route>
           <Route path="/addlisting" element={<AddListing/>}></Route>
+          <Route path="/account" element={<Account/>}></Route>
         </Routes>
       <Footer/>
     </div>

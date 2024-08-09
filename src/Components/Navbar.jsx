@@ -32,8 +32,7 @@ export default function Navbar()
             <div className='bg-gray-600 w-[2rem] h-[0.2rem] rounded-[100px] rotate-45'></div>
         </div>
                 <Link to="/" className='bg-blue-300 rounded-[100px] px-3 py-1'>Home</Link>
-                <a href="" className='px-3 py-1'>About</a>
-                <a href="" className='px-3 py-1'>Blogs</a>
+                <a href="#about" className='px-3 py-1'>About</a>
                 <Link to="/listing" className='px-3 py-1'>Listings</Link>
                 <a href="" className='px-3 py-1'>Services</a>
                 <Link to="/login" className="py-2 flex flex-row gap-1 font-light text-[1.1rem] items-center"><img src={logo} className='w-[50%] h-[100%]'></img>Login/Register</Link>
@@ -42,8 +41,7 @@ export default function Navbar()
         <div className='font-poppins hidden lg:block ml-2'>
             <ul className="py-2 gap-5 list-none font-poppins text-[1.1rem] flex flex-row justify-between font-light items-center">
                 <Link to="/" ><p className='bg-blue-300 rounded-[100px] px-3 py-1'>Home</p></Link>
-                <a href="">About</a>
-                <a href="">Blogs</a>
+                <Link to="/#about">About</Link>
                 <Link to="/listing"><p>Listings</p></Link>
                 <a href="">Services</a>
             </ul>
