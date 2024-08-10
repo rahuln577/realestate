@@ -3,8 +3,8 @@ import Assistimg from "../Components/Assistimg"
 import image from '../Images/Assist/image.png'
 import image2 from '../Images/Assist/image2.png'
 import Infobox from "../Components/Infobox"
-export default function Assist() {
-    return <div className="flex flex-col lg:flex-row w-[80%] mx-auto my-[6rem]" id="about">
+export default function Assist(props) {
+    return <div className="flex flex-col lg:flex-row w-[80%] mx-auto py-[6rem]" id="about" ref={props.reff}>
         <Assisttext />
         <Assistimg />
         <div className="flex lg:hidden flex-column justify-center mt-[0rem]">

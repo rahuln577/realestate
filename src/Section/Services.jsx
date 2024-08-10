@@ -2,9 +2,11 @@ import ServiceCard from "../Components/ServiceCard"
 import { FaBed } from "react-icons/fa";
 import { FaSearch } from "react-icons/fa";
 import { FaHome } from "react-icons/fa";
-export default function Services()
+export default function Services(props)
 {
-    return <div className="bg-gray-100 flex flex-col justify-center items-center py-[4rem]">
+    return <div className="flex flex-col"> 
+        <div ref={props.reff} className="w-full"></div>
+    <div className="bg-gray-100 flex flex-col justify-center items-center py-[4rem]" >
         <div className="w-[80%] flex flex-col justify-center items-center">
         <p className="text-black tracking-wider my-[1rem]">SERVICES</p>
         <h1 className="text-black text-[2rem] leading-[2.5rem] sm:text-[2.2rem] font-semibold my-[1rem]">We provide the best services</h1>
@@ -14,5 +16,6 @@ export default function Services()
         <ServiceCard image={<FaHome style={{fontSize:"2.5rem",color:"white"}}/>} head="Sell a New home" follow="You can buy the best houses at best prices"/>
         </div>
         </div>
+    </div>
     </div>
 }
