@@ -10,14 +10,27 @@ export default function Listing()
     let flag=false;
     function handlefil()
     {
-        console.log(fil.current.classList)
-    fil.current.classList.toggle("filapp")
-    fil.current.classList.toggle("filclanim")
+        if(flag)
+        {
+            
+            fil.current.classList.add("filcl")
+
+            setTimeout(()=>{fil.current.classList.remove('filapp')},1000)
+            flag=false
+        }
+        else{
+            flag=true
+            fil.current.classList.remove('filcl')
+            fil.current.classList.add("filapp")
+            //setTimeout(()=>{fil.current.classList.remove('filclanim')},2000)
+            
+        }
+    
     }
     return <div>
     <div className=" flex flex-row justify-between mt-[1rem]">
         <Filter/>
-        <FilterMob fil={fil}/>
+        <FilterMob fil={fil} handle={handlefil}/>
         <div className="w-[100%] lg:w-[65%] mx-4">
         <ListCard title="1 BHK House for rent in attiguppe" second="Independent house,4th cross, 4th main, sampige layout,bengaluru-79" rent="20000" deposit="2000" builtup="200" img="https://images.pexels.com/photos/449461/pexels-photo-449461.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" bhk="1" furnish="Furnished" tenant="All" avail="Now"/>
         <ListCard title="1 BHK House for rent in attiguppe" second="Independent house,4th cross, 4th main, sampige layout,bengaluru-79" rent="20000" deposit="2000" builtup="200" img="https://images.pexels.com/photos/449461/pexels-photo-449461.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" bhk="1" furnish="Furnished" tenant="All" avail="Now"/>

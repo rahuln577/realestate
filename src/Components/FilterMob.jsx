@@ -10,7 +10,7 @@ export default function Filter(props) {
         })
     }
     
-    return <div className=" shadow-xl rounded-lg w-[99%] h-[90vh] fixed bg-white z-10 mb-[6rem] pt-[8rem] translate-y-[-120%]" ref={props.fil}>
+    return <div className="flex flex-col items-center shadow-xl rounded-lg w-[100%] h-[100vh] fixed bg-white z-10 mb-[6rem] pt-[8rem] translate-y-[-120%]" ref={props.fil}>
 
         <div className="w-[90%] mx-auto">
             <h1 className="font-semibold text-[0.9rem] my-2">BHK Type</h1>
@@ -59,5 +59,9 @@ export default function Filter(props) {
             </div>
             </div>
         </div>
+
+        <button className='text-[1.1rem] text-center border-black border-[1px] p-1 w-[8rem] rounded-[3px] cursor-pointer' onClick={props.handle}>
+            Filter
+        </button>
     </div>
 }

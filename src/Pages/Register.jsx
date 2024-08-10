@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom'
 export default function Register()
 {
     return<div className="flex flex-row bg-blue-800 h-[110vh] w-full justify-center items-center">
-        <div className="w-[80%] h-[49rem] flex flex-row bg-white justify-between rounded-[20px] overflow-hidden ">
+        <div className="w-[95%] sm:w-[80%] h-[49rem] flex flex-row bg-white justify-between rounded-[20px] overflow-hidden ">
             <div className="w-[100%] md:w-[50%]">
                 <h1 className="text-[3rem] text-blue-600 font-bold text-center my-[3rem]">Register</h1>
                 <form className="w-[70%] mx-auto h-[60%] flex flex-col gap-2 justify-evenly">
@@ -39,8 +39,8 @@ export default function Register()
                 </div>
 
                 <div className="flex justify-center gap-5 mt-4">
-                    <FaGoogle style={{fontSize:"1.2rem",color:"green"}}/>
-                    <FaFacebook style={{fontSize:"1.2rem",color:"blue"}}/>
+                    <FaGoogle style={{fontSize:"2rem",color:"green"}}/>
+                    <FaFacebook style={{fontSize:"2rem",color:"blue"}}/>
                 </div>
 
                 <div className="flex justify-center my-6">
