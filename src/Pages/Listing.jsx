@@ -15,7 +15,7 @@ export default function Listing()
             
             fil.current.classList.add("filcl")
 
-            setTimeout(()=>{fil.current.classList.remove('filapp')},1000)
+            fil.current.classList.remove('filapp')
             flag=false
         }
         else{
