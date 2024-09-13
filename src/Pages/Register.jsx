@@ -1,25 +1,42 @@
 import { FaGoogle } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
-import {Link} from 'react-router-dom'
+import {Link,useNavigate} from 'react-router-dom'
+import { useDispatch } from "react-redux";
+import {newUser} from "./../Redux/userStore"
+
 
 export default function Register()
 {
+    let userDispatch = useDispatch()
+    const navigate = useNavigate()
+    function handle(e)
+    {
+    let ob={}
+    for(let i=0;i<e.target.length;i++)
+    {
+        console.log(e.target[i].value)
+        ob[e.target[i].name]=e.target[i].value
+    }
+    userDispatch(newUser(ob))
+    navigate("/login")
+    }
+
     return<div className="flex flex-row bg-blue-800 h-[110vh] w-full justify-center items-center">
         <div className="w-[95%] sm:w-[80%] h-[49rem] flex flex-row bg-white justify-between rounded-[20px] overflow-hidden ">
             <div className="w-[100%] md:w-[50%]">
                 <h1 className="text-[3rem] text-blue-600 font-bold text-center my-[3rem]">Register</h1>
-                <form className="w-[70%] mx-auto h-[60%] flex flex-col gap-2 justify-evenly">
+                <form onSubmit={handle} className="w-[70%] mx-auto h-[60%] flex flex-col gap-2 justify-evenly">
                 <div className="flex flex-col">
                     <label for="name" className="text-gray-400">Name</label>
-                    <input type="text" required className="border-b-[2px] border-b-blue-600 px-2"></input>
+                    <input type="text" name="uname" required className="border-b-[2px] border-b-blue-600 px-2"></input>
                 </div>
                 <div className="flex flex-col">
                     <label for="name" className="text-gray-400">Email</label>
-                    <input type="email" required className="border-b-[2px] border-b-blue-600 px-2"></input>
+                    <input type="email" name="email" required className="border-b-[2px] border-b-blue-600 px-2"></input>
                 </div>
                 <div className="flex flex-col">
                     <label for="name" className="text-gray-400">Phone</label>
-                    <input type="phone" required className="border-b-[2px] border-b-blue-600 px-2"></input>
+                    <input type="phone" name="phone" required className="border-b-[2px] border-b-blue-600 px-2"></input>
                 </div>
                 <div className="flex flex-col">
                     <label for="name" className="text-gray-400">Password</label>
@@ -27,7 +44,7 @@ export default function Register()
                 </div>
                 <div className="flex flex-col">
                     <label for="name" className="text-gray-400">ReEnter Password</label>
-                    <input type="password" required className="border-b-[2px] border-b-blue-600 px-2"></input>
+                    <input type="password" name="password" required className="border-b-[2px] border-b-blue-600 px-2"></input>
                 </div>
                 <input type="submit" value="Login" className="w-[40%] py-2 shadow-lg shadow-blue-200 rounded-[10px] mx-auto bg-blue-600 text-white"></input>
                 </form>

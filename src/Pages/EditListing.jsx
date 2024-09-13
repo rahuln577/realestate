@@ -1,16 +1,17 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect,useRef } from 'react';
 import { useDispatch } from 'react-redux';
-import { addListings } from '../Redux/listingsStore';
+import { editList ,List} from '../Redux/listingsStore';
 import Login from './Login';
 import { useSelector } from 'react-redux';
 
 
-
-export default function AddListing()
+export default function EditListing()
 {
     const [image,setimage] = useState()
-    const error = useSelector((state)=>state.listings.error)
     const logged = useSelector((state)=>state.user.loggedin)
+    const data = useSelector((state)=>state.listings.data)
+    const loading = useSelector((state)=>state.listings.loading)
+    const ref=useRef()
     let listingsDispatch = useDispatch()
     function upload(event)
     {
@@ -22,14 +23,31 @@ export default function AddListing()
             formdata.append(event.target[i].name,event.target[i].value)
         }
         formdata.append("image",image)
-        listingsDispatch(addListings(formdata))
+        formdata.append("listingid",data.listingid)
+        listingsDispatch(editList(formdata))
         event.target.reset()
     }
    
-    return <>{!logged?<Login/>:<div className="bg-blue-800  flex justify-center items-center ">
+    useEffect(()=>{
+        if(!loading){
+        let form = ref.current
+
+        form.children[0].value=data?.title
+        form.children[1].value=data?.address
+        form.children[2].children[0].value=data?.rent
+        form.children[2].children[1].value=data?.appartmentType
+        form.children[2].children[2].value=data?.furnishing
+        form.children[3].value=data?.price
+        form.children[4].value=data?.deposit
+        form.children[5].value=data?.builtup 
+        form.children[6].value=data?.preferance
+        form.children[7].value=data?.availability
+        }
+    },[loading])
+    return <><div className="bg-blue-800  flex justify-center items-center ">
     <div className="w-[90%] md:w-[50%] mx-auto my-4 p-[1rem] bg-white md:p-[4rem] rounded-md" >
         <h1 className="text-[2rem] sm:text-[3rem] mb-3 font-bold text-blue-600 text-center">Enter the Details</h1>
-        <form onSubmit={upload} className="mx-auto flex flex-col gap-[2rem] ">
+        <form ref={ref} id="form" onSubmit={upload} className="mx-auto flex flex-col gap-[2rem] ">
             <input type="text" name="title" placeholder="Title" required className="border-b-[2px] border-b-blue-600 px-2 text-[1.1rem]"></input>
 
 
@@ -77,6 +95,6 @@ export default function AddListing()
         
         </form>
     </div>
-    </div>}
+    </div>
     </>
 }

@@ -2,8 +2,9 @@ import bedlogo from '../Images/bedlogo.png'
 import bathlogo from '../Images/bathlogo.png'
 export default function PropertyCard(prop)
 {
+    let api = process.env.REACT_APP_API_LINK
     return<div className='flex flex-col w-[80%] sm:min-w-[18rem] my-6'>
-        <img src={prop.image} className='w-[100%] md:w-[17rem] h-[16rem] rounded-[20px]'></img>
+        <img src={api+"/"+prop.image} className='w-[100%] md:w-[17rem] h-[16rem] rounded-[20px]'></img>
         <div className='flex flex-col gap-1'>
             <h2 className='mt-2 text-[1.2rem] font-semibold'>Rs. {prop.amount}</h2>
             <p className='text-[0.9rem]'>{prop.place}</p>

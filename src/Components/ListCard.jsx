@@ -6,6 +6,7 @@ import { FaLocationDot } from "react-icons/fa6";
 
 export default function ListCard(props)
 {
+    const image = process.env.REACT_APP_API_LINK
     return <div className="shadow-lg rounded-lg p-4 mb-[3rem]">
         <div className="py-[1rem] sm:py-[2rem] flex flex-col justify-evenly px-4 bg-blue-100 overflow-hidden rounded-md">
             <h1 className="sm:text-[1rem] text-[0.9rem]">{props.title}</h1>
@@ -27,7 +28,7 @@ export default function ListCard(props)
         </div>
 
         <div className="flex flex-col sm:flex-row gap-2">
-            <img src={props.img} className="w-[100%] sm:w-[40%] min-h-[10rem] rounded-[10px]"></img>
+            <img src={image+"/"+props.img} className="w-[100%] sm:w-[40%] min-h-[10rem] rounded-[10px]" loading="lazy" alt="..."></img>
             <div className="w-[100%] sm:w-[60%] flex flex-col gap-3">
 
                 
@@ -37,7 +38,7 @@ export default function ListCard(props)
                 <div className="flex flex-row items-center gap-2 row-start-1 row-span-1 col-start-1 col-span-1 mx-2">
                     <MdApartment style={{fontSize:"2rem"}}/>
                     <div>
-                        <h2 className="text-[0.9rem] sm:text-[1rem]">{props.bhk} BHK</h2>
+                        <h2 className="text-[0.9rem] sm:text-[1rem]">{props.bhk}</h2>
                         <p className=" text-[0.7rem] sm:text-[0.8rem] text-gray-400">Apartment Type</p>
                     </div>
                 </div>

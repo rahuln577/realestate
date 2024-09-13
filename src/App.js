@@ -1,13 +1,17 @@
+import {lazy,Suspense} from "react"
 import Navbar from './Components/Navbar';
-import Home from './Pages/Home';
-import Listing from './Pages/Listing';
-import {HashRouter,BrowserRouter,Routes,Route} from 'react-router-dom'
-import Login from './Pages/Login';
+import Loading from "./Pages/Loading";
+import {Routes,Route} from 'react-router-dom'
 import Footer from './Section/Footer';
-import Register from './Pages/Register';
-import AddListing from './Pages/AddListing';
-import Account from './Pages/Account';
 import './App.css';
+
+const Home = lazy(()=>import('./Pages/Home'))
+const Listing = lazy(()=>import('./Pages/Listing'))
+const Login = lazy(()=>import('./Pages/Login'))
+const Register = lazy(()=>import('./Pages/Register'))
+const AddListing = lazy(()=>import('./Pages/AddListing'))
+const Account = lazy(()=>import('./Pages/Account'))
+const EditListing = lazy(()=>import('./Pages/EditListing'))
 
 function App() {
   return (
@@ -15,11 +19,12 @@ function App() {
       <Navbar/>
         <Routes>
           <Route path="/" element={<Home/>}></Route>
-          <Route path="/listing" element={<Listing/>}></Route>
-          <Route path="/login" element={<Login/>}></Route>
-          <Route path="/register" element={<Register/>}></Route>
-          <Route path="/addlisting" element={<AddListing/>}></Route>
-          <Route path="/account" element={<Account/>}></Route>
+          <Route path="/listing" element={<Suspense fallback={<Loading/>}><Listing/></Suspense>}></Route>
+          <Route path="/login" element={<Suspense fallback={<Loading/>}><Login/></Suspense>}></Route>
+          <Route path="/register" element={<Suspense fallback={<Loading/>}><Register/></Suspense>}></Route>
+          <Route path="/addlisting" element={<Suspense fallback={<Loading/>}><AddListing/></Suspense>}></Route>
+          <Route path="/account" element={<Suspense fallback={<Loading/>}><Account/></Suspense>}></Route>
+          <Route path="/editlisting" element={<Suspense fallback={<Loading/>}><EditListing/></Suspense>}></Route>
         </Routes>
       <Footer/>
     </div>
