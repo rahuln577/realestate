@@ -28,7 +28,7 @@ export default function ListCard(props)
         </div>
 
         <div className="flex flex-col sm:flex-row gap-2">
-            <img src={image+"/"+props.img} className="w-[100%]  sm:w-[40%] min-h-[10rem] max-h-[15rem] rounded-[10px]" loading="lazy" alt="..."></img>
+            <img src={props.img} className="w-[100%]  sm:w-[40%] min-h-[10rem] max-h-[15rem] rounded-[10px]" loading="lazy" alt="..."></img>
             <div className="w-[100%] sm:w-[60%] flex flex-col gap-3">
 
                 
