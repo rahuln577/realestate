@@ -7,8 +7,8 @@ export default function PropertyCard(prop)
         <img src={prop.image} className='w-[100%] md:w-[17rem] h-[16rem] rounded-[20px]'></img>
         <div className='flex flex-col gap-1'>
             <h2 className='mt-2 text-[1.2rem] font-semibold'>Rs. {prop.amount}</h2>
-            <p className='text-[0.9rem]'>{prop.place}</p>
-            <p className='text-gray-500 font-light text-[0.8rem]'>{prop.address}</p>
+            <p className='text-[0.9rem]'>{prop.place.slice(0,34)+"..."}</p>
+            <p className='text-gray-500 font-light text-[0.8rem]'>{prop.address.slice(0,38)}</p>
             <div className='flex flex-row gap-7'>
                 <div className='flex flex-row gap-1 items-center'>
                     <img src={bedlogo} className='w-[1.5rem]'></img>
