@@ -48,7 +48,7 @@ export default function FilterMob(props) {
         props.handle()
     }
     
-    return <form onSubmit={handlesub} className="flex flex-col items-center shadow-xl rounded-lg w-[100%] h-[100dvh] fixed bg-white z-10 mb-[6rem] pt-[8rem] translate-y-[-120%]" ref={props.fil}>
+    return <form onSubmit={handlesub} className="flex flex-col items-center shadow-xl rounded-lg w-[100%] h-[100dvh] fixed top-0 bg-white z-10 mb-[6rem] pt-[8rem] translate-y-[-105%]" ref={props.fil}>
 
 <h1 className="border-b-blue-600 border-b-[2.5px] text-center text-[1.2rem] pb-2 w-[90%] mx-auto mt-[-3.5rem]">Filters</h1>
         <div className="w-[90%] mx-auto ">

@@ -2,8 +2,9 @@ import Assisttext from "../Components/Assisttext"
 import Assistimg from "../Components/Assistimg"
 import image from '../Images/Assist/image.png'
 import image2 from '../Images/Assist/image2.png'
-import Infobox from "../Components/Infobox"
-export default function Assist(props) {
+import React from "react"
+
+export default React.memo((props) => {
     return <div className="flex flex-col lg:flex-row w-[80%] mx-auto py-[6rem]" id="about" ref={props.reff}>
         <Assisttext />
         <Assistimg />
@@ -30,4 +31,4 @@ export default function Assist(props) {
             </div>
         </div>
     </div>
-}
+})
